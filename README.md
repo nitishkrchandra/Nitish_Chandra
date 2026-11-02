@@ -1,27 +1,30 @@
-# Minimal Mistakes remote theme starter
+# Nitish Kumar Chandra — Academic Website
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes). 
+A responsive academic site built entirely with HTML and CSS. No Jekyll, Ruby, JavaScript, third-party fonts, build step, or external CDN.
 
-Contains basic configuration to get you a site with:
+## Files
+- `index.html` — homepage
+- `research/index.html` — research areas
+- `publications/index.html` — publication list (2021–2026)
+- `cv/index.html` — concise CV
+- `teaching/index.html` — teaching
+- `site/style.css` — all styling
+- `assets/images/bio-photo.jpg` — retained existing photo
+- `.nojekyll` — disable Jekyll for GitHub Pages
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+The old Jekyll Markdown files are retained for archival purposes, but no longer drive the live HTML pages. To edit content, edit the appropriate HTML file directly.
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+## Publishing
+GitHub Pages: Publish master branch from repository root. Existing project URL: https://nitishkrchandra.github.io/Nitish_Chandra/ . Relative asset/page links also work on a domain root.
 
----
+Cloudflare Pages (separate hosting domain):
+1. Cloudflare dashboard → Workers & Pages → Create → Pages → Import Git repository.
+2. Select this repository and production branch `master`.
+3. Framework preset: None. Build command: `exit 0` or blank. Build output directory: `.` (repository root).
+4. Deploy and test the resulting `*.pages.dev` URL on the affected university network. Ideally connect a custom domain.
 
-## Troubleshooting
+A static redesign alone does **not** bypass university filtering of the github.io domain. Hosting must change if that domain is blocked. No alternate URL is guaranteed universally accessible.
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+Source for deployment configuration: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+Publication and profile content refreshed in November 2026 using the September 2026 CV and publicly available research records. Confidential patent details are omitted.
