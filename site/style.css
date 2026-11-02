@@ -37,3 +37,103 @@
 .blog-prose .blog-math{font-family:Georgia,serif;color:#29475c}
 .blog-refs{margin-top:48px}
 @media(max-width:700px){.blog-prose{font-size:15.5px;line-height:1.78}.math-typeset{padding:15px 12px}.math-typeset math{font-size:1.06em}.blog-visual{padding:12px 10px}.blog-visual figcaption,.math-typeset figcaption{font-size:12px}}
+
+
+/* Final blog reading polish: justified prose, restrained display mathematics. */
+.blog-post { max-width: 735px; margin-left: auto; margin-right: auto; }
+.blog-post-header { max-width: 715px; }
+.blog-prose {
+  width: 100%;
+  max-width: 705px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0;
+  font-kerning: normal;
+}
+.blog-prose > p,
+.blog-prose > ol > li,
+.blog-prose > ul > li {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.blog-prose > p { margin-bottom: 1.35em; }
+.blog-prose h2 {
+  text-align: left;
+  margin-top: 2.05em;
+  margin-bottom: .7em;
+  letter-spacing: -.01em;
+}
+.blog-prose .blog-steps p,
+.blog-visual figcaption,
+.math-typeset figcaption { text-align: left; hyphens: none; }
+.math-typeset {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  margin: 31px 0 33px;
+  padding: 18px 24px 19px;
+  background: #fcfdfe;
+  border: 1px solid #d9e4eb;
+  border-left: 2px solid #638ca4;
+  border-radius: 4px;
+  box-shadow: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.math-typeset .math-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #668295;
+  font-size: 10px;
+  font-family: var(--sans);
+  font-weight: 730;
+  text-transform: uppercase;
+  letter-spacing: .085em;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+.math-typeset math {
+  display: block;
+  width: max-content;
+  max-width: none;
+  min-width: 0;
+  margin: 0 auto 20px;
+  padding: 2px 0;
+  font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", serif;
+  font-size: 1.38rem;
+  line-height: 1.55;
+  color: #19394d;
+  text-align: center;
+}
+.math-typeset figcaption {
+  border-top: 1px solid #e1e9ed;
+  margin: 0;
+  padding-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #607788;
+}
+.blog-visual { background: #fbfcfd; margin-top: 31px; margin-bottom: 34px; }
+.blog-visual figcaption { line-height: 1.65; }
+@media (max-width: 620px) {
+  .blog-prose { font-size: 15.5px; line-height: 1.82; }
+  .blog-prose > p,
+  .blog-prose > ol > li,
+  .blog-prose > ul > li { text-align: left; hyphens: none; }
+  .math-typeset { padding: 14px 14px 17px; }
+  .math-typeset math { font-size: 1.13rem; }
+  .math-typeset .math-topline { font-size: 9px; margin-bottom: 15px; }
+}
+@media print {
+  .blog-prose > p,
+  .blog-prose > ol > li,
+  .blog-prose > ul > li { text-align: justify; hyphens: auto; }
+  .math-typeset { break-inside: avoid; box-shadow: none; }
+}
