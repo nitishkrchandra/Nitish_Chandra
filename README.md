@@ -1,26 +1,30 @@
 # Nitish Kumar Chandra — Academic Website
 
-A responsive, dependency-free academic website maintained with HTML and CSS. No Jekyll, Ruby, Node, external fonts, or external JavaScript.
+A responsive academic site built entirely with HTML and CSS. No Jekyll, Ruby, JavaScript, third-party fonts, build step, or external CDN.
 
-## Site structure
+## Files
+- `index.html` — homepage
+- `research/index.html` — research areas
+- `publications/index.html` — publication list (2021–2026)
+- `cv/index.html` — concise CV
+- `teaching/index.html` — teaching
+- `site/style.css` — all styling
+- `assets/images/bio-photo.jpg` — retained existing photo
+- `.nojekyll` — disable Jekyll for GitHub Pages
 
-- `index.html` — academic homepage and research highlights
-- `research/index.html` — research overview and current projects
-- `publications/index.html` — journal articles, conference/workshop papers, and preprints
-- `honors/index.html` — honors, awards, conference presentations, research schools, peer review, and training
-- `teaching/index.html` — teaching assistantships
-- `cv/index.html` — web-based curriculum vitae
-- `site/style.css` — all layout, typography, responsive and print styles
-- `assets/images/bio-photo.jpg` — original site portrait
+The old Jekyll Markdown files are retained for archival purposes, but no longer drive the live HTML pages. To edit content, edit the appropriate HTML file directly.
 
-Update the HTML files directly; no build step is required. The old Jekyll source files remain in the repository for historical reference, but `.nojekyll` ensures the static HTML is served.
+## Publishing
+GitHub Pages: Publish master branch from repository root. Existing project URL: https://nitishkrchandra.github.io/Nitish_Chandra/ . Relative asset/page links also work on a domain root.
 
-## Hosting
+Cloudflare Pages (separate hosting domain):
+1. Cloudflare dashboard → Workers & Pages → Create → Pages → Import Git repository.
+2. Select this repository and production branch `master`.
+3. Framework preset: None. Build command: `exit 0` or blank. Build output directory: `.` (repository root).
+4. Deploy and test the resulting `*.pages.dev` URL on the affected university network. Ideally connect a custom domain.
 
-GitHub Pages should publish the `master` branch from the repository root. The site uses relative links and works at `/Nitish_Chandra/` or at a custom domain root.
+A static redesign alone does **not** bypass university filtering of the github.io domain. Hosting must change if that domain is blocked. No alternate URL is guaranteed universally accessible.
 
-If a campus network blocks `github.io`, changing the theme will not resolve the network block. A separate hosting address such as Cloudflare Pages or a custom domain needs separate deployment and testing.
+Source for deployment configuration: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
 
-## Academic content
-
-Academic information updated in November 2026 from `Nitish_Chandra_CV_Yale.pdf` (October 2026) and the earlier academic profile. Current papers in progress are explicitly separated from public publications. No confidential or intellectual-property-specific material is included.
+Publication and profile content refreshed in November 2026 using the September 2026 CV and publicly available research records. Confidential patent details are omitted.
