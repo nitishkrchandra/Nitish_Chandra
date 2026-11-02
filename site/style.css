@@ -22,3 +22,18 @@
 .blog-post-header{margin-bottom:37px}
 .blog-post-deck{line-height:1.75;max-width:680px}
 @media(max-width:700px){.blog-prose{font-size:15.5px;line-height:1.78}.blog-prose h2{font-size:24px;margin-top:36px}.blog-equation{padding:15px 13px}.blog-equation .eq-line{font-size:1.04rem}.blog-equation .eq-caption{font-size:12px}}
+
+/* Native MathML and responsive academic figures; scoped to blog articles */
+.blog-prose{max-width:690px;font-size:16px;line-height:1.84}
+.blog-prose h2{margin-top:40px;margin-bottom:17px;line-height:1.34}
+.blog-prose p{margin-bottom:21px}
+.blog-visual,.math-typeset{margin:27px 0 30px;max-width:100%}
+.blog-visual{border:1px solid #dce7ed;border-radius:5px;background:#f8fafb;padding:18px 16px 12px}
+.blog-visual svg{display:block;width:100%;height:auto;max-height:290px}
+.blog-visual figcaption,.math-typeset figcaption{font-size:12.5px;line-height:1.6;color:#667e8d;margin:12px 0 0}
+.math-typeset{background:#f3f7f9;border:1px solid #dce7ed;border-left:3px solid #7a9fb3;border-radius:4px;padding:19px 18px 17px;overflow-x:auto}
+.math-typeset math{font-family:STIX Two Math,Latin Modern Math,Cambria Math,serif;font-size:1.23em;color:#183b52;min-width:max-content;max-width:100%;margin:0 auto}
+.math-typeset figcaption{border-top:1px solid #d9e6ec;padding-top:11px}
+.blog-prose .blog-math{font-family:Georgia,serif;color:#29475c}
+.blog-refs{margin-top:48px}
+@media(max-width:700px){.blog-prose{font-size:15.5px;line-height:1.78}.math-typeset{padding:15px 12px}.math-typeset math{font-size:1.06em}.blog-visual{padding:12px 10px}.blog-visual figcaption,.math-typeset figcaption{font-size:12px}}
